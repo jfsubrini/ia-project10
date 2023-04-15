@@ -18,7 +18,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Testing code
         run: echo "Testing the code. uses fffff"
-      - name: Running Super-Linter
-        uses: github/super-linter@v4  
-        env:
-          DEFAULT_BRANCH: main
+#       - name: Running Super-Linter
+#         uses: github/super-linter@v4  
+#         env:
+#           DEFAULT_BRANCH: main
