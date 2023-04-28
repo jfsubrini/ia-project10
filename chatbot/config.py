@@ -4,18 +4,20 @@
 """Configuration for the bot."""
 
 import os
+from dotenv import load_dotenv
 
 
+load_dotenv()  # to load our environment variables from the .env file.
 class DefaultConfig:
     """Configuration for the bot."""
 
     PORT = 3978
     APP_ID = os.environ.get("MicrosoftAppId", "")
     APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
-    LUIS_APP_ID = os.environ.get("LuisAppId", "")
-    LUIS_API_KEY = os.environ.get("LuisAPIKey", "")
-    # LUIS endpoint host name, ie "westus.api.cognitive.microsoft.com"
-    LUIS_API_HOST_NAME = os.environ.get("LuisAPIHostName", "")
+    CLU_APP_ID = os.environ.get("CLUAppId", "")
+    CLU_API_KEY = os.environ.get("CLUAPIKey", "")
+    # CLU endpoint host name, ie "chatbot.cognitiveservices.azure.com"
+    CLU_API_HOST_NAME = os.environ.get("CLUAPIHostName", "")
     APPINSIGHTS_INSTRUMENTATION_KEY = os.environ.get(
         "AppInsightsInstrumentationKey", ""
     )
